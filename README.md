@@ -88,26 +88,32 @@ Field teams record progress via geo-tagged photos (**NRSC DRISHTI**). However, m
 
 ```mermaid
 flowchart TD
-    subgraph Data Sources
+    subgraph Data_Sources ["Data Sources"]
         S2["Sentinel-2 L2A (10m)<br/>Copernicus CDSE API"]
         CD["CartoDEM (30m)<br/>ISRO / NRSC"]
         FD["DRISHTI Geo-Records<br/>Photos + Coordinates"]
     end
 
-    subgraph Data Preprocessing Pipeline
+    subgraph Preprocessing ["Data Preprocessing Pipeline"]
         P1["process_s2_10m.py<br/>Mosaicing & AOI Clip"]
         P2["derive_drainage_and_slope.py<br/>Pysheds Stream Extraction"]
         P3["generate_web_overlays.py<br/>Transparent GeoTIFF to Web PNG"]
     end
 
-    subgraph Backend Core (FastAPI)
+    subgraph Backend ["Backend Core (FastAPI)"]
         RS["RasterService<br/>GeoTIFF I/O & Zonal Stats"]
         CS["CrossCheckService<br/>Deterministic Rules Engine"]
         AI["AIService<br/>GPT-4o-mini Vision & Advisory"]
         API["FastAPI Endpoints<br/>RESTful JSON API"]
     end
 
-    subgraph Frontend Client (Civic Cartography SPA)
+    subgraph Frontend ["Frontend Client (Civic Cartography SPA)"]
+        DASH["Dashboard & KPI Cards"]
+        MAP["Monitor (Leaflet Map)"]
+        FIELD["Field Ingestion & Upload"]
+        ANALYSIS["Before/After Split Slider"]
+        REPORT["Executive PDF/Print Dossier"]
+    end
         DASH["Dashboard & KPI Cards"]
         MAP["Monitor (Leaflet Map)"]
         FIELD["Field Ingestion & Upload"]
