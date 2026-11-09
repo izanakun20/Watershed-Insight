@@ -1,0 +1,20 @@
+{
+  "id": "1b58c1ff-cda5-4db7-862b-8fd63a52b8b8",
+  "timestamp": "2026-08-31T05:50:48.487750+00:00",
+  "latitude": 15.35,
+  "longitude": 79.65,
+  "intervention_category": "Water Harvesting",
+  "intervention_type": "Check Dam",
+  "reported_intervention": "Check Dam",
+  "ai_predicted_intervention": "Classification Failed",
+  "ai_confidence": "0.0",
+  "ai_short_description": "Error connecting to OpenRouter: ('Connection aborted.', TimeoutError('The write operation timed out'))",
+  "intervention_stage": "During Work",
+  "description": "",
+  "gps_accuracy_m": null,
+  "is_mock": false,
+  "location_valid": true,
+  "uploader": "Web Upload",
+  "photo_filename": "1b58c1ff-cda5-4db7-862b-8fd63a52b8b8.jpg",
+  "photo_url": "/api/drishti/photos/1b58c1ff-cda5-4db7-862b-8fd63a52b8b8.jpg"
+}

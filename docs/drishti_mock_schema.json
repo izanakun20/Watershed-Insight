@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DRISHTI Mock Field Record",
+  "description": "Schema for simulating a field photograph upload similar to the Bhuvan DRISHTI app for SIH 26015.",
+  "type": "object",
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "description": "Unique identifier for the field record (UUID)."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of when the photo was captured."
+    },
+    "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+    "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+    "gps_accuracy_m": { "type": "number", "description": "GPS accuracy in meters." },
+    "bearing": { "type": "number", "description": "Compass direction the camera was facing (0-360)." },
+    "watershed_id": { "type": "string", "description": "The watershed ID." },
+    "project_id": { "type": "string", "description": "ID of the specific WDC-PMKSY project." },
+    "intervention_category": {
+      "type": "string",
+      "enum": [
+        "Water Harvesting",
+        "Soil Conservation",
+        "Vegetation/Biomass"
+      ]
+    },
+    "intervention_type": {
+      "type": "string",
+      "enum": [
+        "Check Dam",
+        "Percolation Tank",
+        "Farm Pond",
+        "Stop Dam",
+        "Contour Bunding",
+        "Trenching",
+        "Gully Plugs",
+        "Terracing",
+        "Afforestation",
+        "Pasture Development",
+        "Agro-forestry"
+      ]
+    },
+    "intervention_stage": {
+      "type": "string",
+      "enum": ["Pre-treatment", "During Work", "Completed"]
+    },
+    "description": { "type": "string", "description": "Optional notes from the field worker." },
+    "photo_filename": { "type": "string", "description": "Name or local path of the uploaded image file." },
+    "uploader": { "type": "string", "description": "ID or name of the field officer." }
+  },
+  "required": [
+    "record_id", "timestamp", "latitude", "longitude", 
+    "watershed_id", "intervention_type", "intervention_stage", "photo_filename"
+  ]
+}

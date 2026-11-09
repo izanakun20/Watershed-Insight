@@ -1,0 +1,17 @@
+{
+  "record_id": "996faff8-aeb4-4759-83d7-ce342e64415f",
+  "timestamp": "2026-07-31T17:23:53.700394+00:00",
+  "latitude": 15.11942,
+  "longitude": 79.48146,
+  "gps_accuracy_m": 6.5,
+  "bearing": 15,
+  "watershed_id": "83",
+  "project_id": "WDC-PMKSY-PRAKASAM",
+  "intervention_category": "Soil Conservation",
+  "intervention_type": "Trenching",
+  "intervention_stage": "Completed",
+  "description": "MOCK DATA: Routine completed field verification for Trenching.",
+  "photo_filename": "996faff8-aeb4-4759-83d7-ce342e64415f.jpg",
+  "uploader": "Nodal_Officer_A",
+  "photo_url": "/api/drishti/photos/996faff8-aeb4-4759-83d7-ce342e64415f.jpg"
+}

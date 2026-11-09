@@ -1,0 +1,17 @@
+{
+  "record_id": "new-mock-123",
+  "timestamp": "2026-08-29T10:00:00Z",
+  "latitude": 15.35,
+  "longitude": 79.64,
+  "gps_accuracy_m": null,
+  "bearing": null,
+  "watershed_id": "83",
+  "project_id": null,
+  "intervention_category": "Water Harvesting",
+  "intervention_type": "Check Dam",
+  "intervention_stage": "Completed",
+  "description": null,
+  "photo_filename": "new-mock-123.jpg",
+  "uploader": null,
+  "photo_url": "/api/drishti/photos/new-mock-123.jpg"
+}

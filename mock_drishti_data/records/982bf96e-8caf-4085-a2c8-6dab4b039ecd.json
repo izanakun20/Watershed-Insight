@@ -1,0 +1,20 @@
+{
+  "id": "982bf96e-8caf-4085-a2c8-6dab4b039ecd",
+  "timestamp": "2026-08-31T05:47:19.644315+00:00",
+  "latitude": 15.35,
+  "longitude": 79.65,
+  "intervention_category": "Water Harvesting",
+  "intervention_type": "Check Dam",
+  "reported_intervention": "Check Dam",
+  "ai_predicted_intervention": "Classification Failed",
+  "ai_confidence": "0.0",
+  "ai_short_description": "Error connecting to OpenRouter: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/completions",
+  "intervention_stage": "Completed",
+  "description": "Test observation",
+  "gps_accuracy_m": null,
+  "is_mock": false,
+  "location_valid": true,
+  "uploader": "Web Upload",
+  "photo_filename": "982bf96e-8caf-4085-a2c8-6dab4b039ecd.jpg",
+  "photo_url": "/api/drishti/photos/982bf96e-8caf-4085-a2c8-6dab4b039ecd.jpg"
+}

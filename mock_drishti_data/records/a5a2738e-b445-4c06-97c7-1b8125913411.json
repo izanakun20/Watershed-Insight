@@ -1,0 +1,17 @@
+{
+  "record_id": "a5a2738e-b445-4c06-97c7-1b8125913411",
+  "timestamp": "2026-08-06T17:23:53.681995+00:00",
+  "latitude": 15.16597,
+  "longitude": 79.7047,
+  "gps_accuracy_m": 10.0,
+  "bearing": 216,
+  "watershed_id": "83",
+  "project_id": "WDC-PMKSY-PRAKASAM",
+  "intervention_category": "Vegetation/Biomass",
+  "intervention_type": "Afforestation",
+  "intervention_stage": "Completed",
+  "description": "MOCK DATA: Routine completed field verification for Afforestation.",
+  "photo_filename": "a5a2738e-b445-4c06-97c7-1b8125913411.jpg",
+  "uploader": "Nodal_Officer_A",
+  "photo_url": "/api/drishti/photos/a5a2738e-b445-4c06-97c7-1b8125913411.jpg"
+}

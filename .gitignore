@@ -1,0 +1,44 @@
+# Environment variables and secrets
+.env
+*.env
+*.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Large geospatial raster data files (>50MB / GeoTIFF / NetCDF)
+*.tif
+*.tiff
+*.nc
+*.dem
+downloaded_data/cartodem*
+downloaded_data/bhoonidhi/
+downloaded_data/drishti/
+processed_data/*.tif
+
+# Compressed archives
+*.zip
+*.tar.gz
+*.rar
+
+# Testing & temporary files
+tmp_test/
+scratch/
+.pytest_cache/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.git_backup/
+

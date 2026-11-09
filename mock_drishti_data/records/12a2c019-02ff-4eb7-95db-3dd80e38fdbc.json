@@ -1,0 +1,17 @@
+{
+  "record_id": "12a2c019-02ff-4eb7-95db-3dd80e38fdbc",
+  "timestamp": "2026-08-03T17:23:53.700394+00:00",
+  "latitude": 15.32872,
+  "longitude": 79.9586,
+  "gps_accuracy_m": 2.1,
+  "bearing": 146,
+  "watershed_id": "83",
+  "project_id": "WDC-PMKSY-PRAKASAM",
+  "intervention_category": "Vegetation/Biomass",
+  "intervention_type": "Pasture Development",
+  "intervention_stage": "During Work",
+  "description": "MOCK DATA: Routine during work field verification for Pasture Development.",
+  "photo_filename": "12a2c019-02ff-4eb7-95db-3dd80e38fdbc.jpg",
+  "uploader": "PIA_Inspector_1",
+  "photo_url": "/api/drishti/photos/12a2c019-02ff-4eb7-95db-3dd80e38fdbc.jpg"
+}

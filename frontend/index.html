@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watershed Command Centre — Gundlakamma Watershed, Prakasam</title>
+    <meta name="description" content="Geospatial watershed monitoring platform for Gundlakamma Watershed, Prakasam district, Andhra Pradesh. SIH 26015.">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Government Header -->
+        <div style="background: var(--surface-container-lowest); color: var(--on-surface-variant); font-size: 11px; font-weight: 500; padding: 4px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--outline-variant); font-family: var(--font-family);">
+            <div style="display:flex; align-items:center; gap: 8px;">
+                <!-- Reusing the Material symbol for a restrained emblem/logo feel -->
+                <span class="material-symbols-outlined" style="font-size:14px;">account_balance</span>
+                <span>Government of India / Ministry of Rural Development / Department of Land Resources and ISRO / NRSC</span>
+            </div>
+            <div style="font-weight: 600; color: var(--primary);">
+                Prototype — Smart India Hackathon 2026
+            </div>
+        </div>
+
+        <!-- Top Navigation Bar -->
+        <header class="top-nav" id="top-nav">
+            <div class="top-nav__left">
+                <div class="top-nav__brand">
+                    <span class="material-symbols-outlined" style="color:var(--primary); margin-right:8px; font-size:24px;">water_drop</span>
+                    Watershed Command Centre
+                </div>
+                <nav class="top-nav__links" id="nav-links">
+                    <a class="top-nav__link active" data-view="dashboard" href="#dashboard">
+                        <span class="material-symbols-outlined" style="font-size:18px;margin-right:4px">dashboard</span>
+                        Dashboard
+                    </a>
+                    <a class="top-nav__link" data-view="map" href="#map">
+                        <span class="material-symbols-outlined" style="font-size:18px;margin-right:4px">map</span>
+                        Monitor
+                    </a>
+                    <a class="top-nav__link" data-view="field" href="#field">
+                        <span class="material-symbols-outlined" style="font-size:18px;margin-right:4px">photo_camera</span>
+                        Field / DRISHTI
+                    </a>
+                    <a class="top-nav__link" data-view="analysis" href="#analysis">
+                        <span class="material-symbols-outlined" style="font-size:18px;margin-right:4px">analytics</span>
+                        Analysis
+                    </a>
+                    <a class="top-nav__link" data-view="reports" href="#reports">
+                        <span class="material-symbols-outlined" style="font-size:18px;margin-right:4px">description</span>
+                        Reports
+                    </a>
+                </nav>
+            </div>
+            <div class="top-nav__right">
+                <!-- Notifications / Account placeholders -->
+                <button class="top-nav__icon-btn" title="Notifications">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button class="top-nav__icon-btn" title="Settings">
+                    <span class="material-symbols-outlined">settings</span>
+                </button>
+                <button class="top-nav__icon-btn" style="margin-left:8px;" title="Account">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Dashboard View -->
+            <div class="view active" id="view-dashboard">
+                <div class="scroll-content" id="dashboard-content">
+                    <div class="loading-spinner">Loading dashboard...</div>
+                </div>
+            </div>
+
+            <!-- Map / Monitor View -->
+            <div class="view" id="view-map">
+                <div class="map-layout">
+                    <aside class="map-sidebar" id="map-sidebar">
+                        <div class="map-sidebar__header">
+                            <div class="map-sidebar__title">Gundlakamma Watershed</div>
+                            <div class="map-sidebar__subtitle">Prakasam, Andhra Pradesh</div>
+                        </div>
+                        <div class="map-sidebar__section">
+                            <div class="map-sidebar__section-title">Layers</div>
+                            <div id="layer-toggles"></div>
+                        </div>
+                    </aside>
+                    <div class="map-container">
+                        <div id="map"></div>
+                        <div id="map-legend" class="map-legend" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Field / DRISHTI View -->
+            <div class="view" id="view-field">
+                <div class="field-layout">
+                    <div class="field-form-panel" id="field-form-panel">
+                        <h2 style="font: var(--font-headline-sm); color: var(--primary); margin-bottom: var(--unit-md);">
+                            <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 4px;">add_a_photo</span>
+                            New Field Observation
+                        </h2>
+                        <form id="drishti-form" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="form-label" for="field-photo">Field Photo *</label>
+                                <input type="file" id="field-photo" name="photo" accept="image/*" class="form-input" required>
+                            </div>
+                            <div class="photo-preview" id="photo-preview">
+                                <div class="photo-preview__placeholder">
+                                    <span class="material-symbols-outlined">add_photo_alternate</span>
+                                    Select or capture a geo-tagged photo
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--unit-sm);">
+                                <div class="form-group">
+                                    <label class="form-label" for="field-lat">Latitude *</label>
+                                    <input type="number" step="0.00001" id="field-lat" name="latitude" class="form-input" placeholder="15.35" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="field-lon">Longitude *</label>
+                                    <input type="number" step="0.00001" id="field-lon" name="longitude" class="form-input" placeholder="79.65" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="field-category">Intervention Category *</label>
+                                <select id="field-category" name="intervention_category" class="form-select" required>
+                                    <option value="">Select category...</option>
+                                    <option value="Water Harvesting">Water Harvesting</option>
+                                    <option value="Soil Conservation">Soil Conservation</option>
+                                    <option value="Vegetation/Biomass">Vegetation/Biomass</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="field-type">Intervention Type *</label>
+                                <select id="field-type" name="intervention_type" class="form-select" required>
+                                    <option value="">Select type...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="field-stage">Intervention Stage *</label>
+                                <select id="field-stage" name="intervention_stage" class="form-select" required>
+                                    <option value="">Select stage...</option>
+                                    <option value="Pre-treatment">Pre-treatment</option>
+                                    <option value="During Work">During Work</option>
+                                    <option value="Completed">Completed</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="field-description">Description</label>
+                                <textarea id="field-description" name="description" class="form-textarea" placeholder="Field notes..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;" id="field-submit-btn">
+                                <span class="material-symbols-outlined">satellite_alt</span>
+                                Upload & Run Cross-Check
+                            </button>
+                        </form>
+                        <div id="field-result" style="margin-top: var(--unit-md);"></div>
+                    </div>
+                    <div class="field-map-panel">
+                        <div class="field-map-panel__map" id="field-map"></div>
+                        <div class="field-map-panel__evidence" id="field-evidence">
+                            <p style="color: var(--on-surface-variant); font-size: 13px;">
+                                <span class="material-symbols-outlined" style="vertical-align: middle; font-size: 16px;">info</span>
+                                Submit a field observation to see satellite cross-check results here.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis View -->
+            <div class="view" id="view-analysis">
+                <div class="scroll-content" id="analysis-content">
+                    <div class="loading-spinner">Loading analysis...</div>
+                </div>
+            </div>
+
+            <!-- Reports View -->
+            <div class="view" id="view-reports">
+                <div class="scroll-content" id="reports-content">
+                    <div class="loading-spinner">Loading reports...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- App JS -->
+    <script src="/static/app.js"></script>
+</body>
+</html>

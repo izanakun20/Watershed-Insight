@@ -1,0 +1,17 @@
+{
+  "record_id": "1e2d7a64-801d-4d5e-8f96-bcf727dd2fa9",
+  "timestamp": "2026-08-06T17:23:53.697308+00:00",
+  "latitude": 15.55101,
+  "longitude": 79.92608,
+  "gps_accuracy_m": 9.4,
+  "bearing": 335,
+  "watershed_id": "83",
+  "project_id": "WDC-PMKSY-PRAKASAM",
+  "intervention_category": "Soil Conservation",
+  "intervention_type": "Gully Plugs",
+  "intervention_stage": "Pre-treatment",
+  "description": "MOCK DATA: Routine pre-treatment field verification for Gully Plugs.",
+  "photo_filename": "1e2d7a64-801d-4d5e-8f96-bcf727dd2fa9.jpg",
+  "uploader": "Nodal_Officer_B",
+  "photo_url": "/api/drishti/photos/1e2d7a64-801d-4d5e-8f96-bcf727dd2fa9.jpg"
+}

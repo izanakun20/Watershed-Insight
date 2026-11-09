@@ -1,0 +1,18 @@
+{
+  "name": "Gundlakamma_Basin_BBOX",
+  "minLon": 78.95,
+  "minLat": 14.9,
+  "maxLon": 80.35,
+  "maxLat": 15.75,
+  "centroid": {
+    "lon": 79.65,
+    "lat": 15.33
+  },
+  "sentinel2_tiles": [
+    "44QNG",
+    "44QNF",
+    "44QMG"
+  ],
+  "landsat_wrs2": "path=140,141 row=051,052",
+  "notes": "Use India-WRIS for official watershed boundary"
+}

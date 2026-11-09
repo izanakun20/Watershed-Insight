@@ -1,0 +1,17 @@
+{
+  "record_id": "f1673471-b2b2-44db-b543-6a653d133ddd",
+  "timestamp": "2026-08-27T17:23:53.700394+00:00",
+  "latitude": 15.27665,
+  "longitude": 79.20821,
+  "gps_accuracy_m": 2.5,
+  "bearing": 131,
+  "watershed_id": "83",
+  "project_id": "WDC-PMKSY-PRAKASAM",
+  "intervention_category": "Vegetation/Biomass",
+  "intervention_type": "Agro-forestry",
+  "intervention_stage": "Completed",
+  "description": "MOCK DATA: Routine completed field verification for Agro-forestry.",
+  "photo_filename": "f1673471-b2b2-44db-b543-6a653d133ddd.jpg",
+  "uploader": "Nodal_Officer_A",
+  "photo_url": "/api/drishti/photos/f1673471-b2b2-44db-b543-6a653d133ddd.jpg"
+}

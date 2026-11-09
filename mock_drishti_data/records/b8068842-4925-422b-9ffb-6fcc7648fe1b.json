@@ -1,0 +1,20 @@
+{
+  "id": "b8068842-4925-422b-9ffb-6fcc7648fe1b",
+  "timestamp": "2026-08-31T07:36:58.619748+00:00",
+  "latitude": 15.35,
+  "longitude": 79.65,
+  "intervention_category": "Water Harvesting",
+  "intervention_type": "Check Dam",
+  "reported_intervention": "Check Dam",
+  "ai_predicted_intervention": "Classification Failed",
+  "ai_confidence": "0.0",
+  "ai_short_description": "Error connecting to OpenRouter: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by SSLError(SSLWantWriteError(3, 'The operation did not complete (write) (_ssl.c:2427)')))",
+  "intervention_stage": "During Work",
+  "description": "",
+  "gps_accuracy_m": null,
+  "is_mock": false,
+  "location_valid": true,
+  "uploader": "Web Upload",
+  "photo_filename": "b8068842-4925-422b-9ffb-6fcc7648fe1b.jpg",
+  "photo_url": "/api/drishti/photos/b8068842-4925-422b-9ffb-6fcc7648fe1b.jpg"
+}

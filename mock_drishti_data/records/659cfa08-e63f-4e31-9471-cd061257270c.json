@@ -1,0 +1,17 @@
+{
+  "id": "659cfa08-e63f-4e31-9471-cd061257270c",
+  "timestamp": "2026-08-30T18:00:04.205407+00:00",
+  "latitude": 15.35,
+  "longitude": 79.65,
+  "intervention_category": "Water Harvesting",
+  "intervention_type": "Check Dam",
+  "intervention_stage": "During Work",
+  "description": "",
+  "gps_accuracy_m": null,
+  "is_mock": false,
+  "location_valid": true,
+  "uploader": "Web Upload",
+  "photo_url": "/api/drishti/photos/659cfa08-e63f-4e31-9471-cd061257270c.jpg",
+  "ai_confidence": "0.0",
+  "photo_filename": "659cfa08-e63f-4e31-9471-cd061257270c.jpg"
+}

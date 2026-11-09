@@ -1,0 +1,17 @@
+{
+  "record_id": "f40084b2-5311-429d-94a9-bc35a659b290",
+  "timestamp": "2026-08-08T17:23:53.700394+00:00",
+  "latitude": 15.11715,
+  "longitude": 79.34149,
+  "gps_accuracy_m": 8.9,
+  "bearing": 40,
+  "watershed_id": "83",
+  "project_id": "WDC-PMKSY-PRAKASAM",
+  "intervention_category": "Soil Conservation",
+  "intervention_type": "Terracing",
+  "intervention_stage": "Completed",
+  "description": "MOCK DATA: Routine completed field verification for Terracing.",
+  "photo_filename": "f40084b2-5311-429d-94a9-bc35a659b290.jpg",
+  "uploader": "Nodal_Officer_B",
+  "photo_url": "/api/drishti/photos/f40084b2-5311-429d-94a9-bc35a659b290.jpg"
+}

@@ -1,0 +1,17 @@
+{
+  "record_id": "2955b85d-d5e2-4f11-9209-a9c9b09a9e1c",
+  "timestamp": "2026-08-25T17:23:53.712992+00:00",
+  "latitude": 15.1978,
+  "longitude": 79.46063,
+  "gps_accuracy_m": 8.5,
+  "bearing": 213,
+  "watershed_id": "83",
+  "project_id": "WDC-PMKSY-PRAKASAM",
+  "intervention_category": "Water Harvesting",
+  "intervention_type": "Stop Dam",
+  "intervention_stage": "During Work",
+  "description": "MOCK DATA: Routine during work field verification for Stop Dam.",
+  "photo_filename": "2955b85d-d5e2-4f11-9209-a9c9b09a9e1c.jpg",
+  "uploader": "Nodal_Officer_A",
+  "photo_url": "/api/drishti/photos/2955b85d-d5e2-4f11-9209-a9c9b09a9e1c.jpg"
+}

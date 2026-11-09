@@ -1,0 +1,17 @@
+{
+  "record_id": "1d0bd0d2-4356-434e-9650-0b410b49708c",
+  "timestamp": "2026-08-29T17:23:53.681995+00:00",
+  "latitude": 15.26358,
+  "longitude": 79.39292,
+  "gps_accuracy_m": 4.4,
+  "bearing": 129,
+  "watershed_id": "83",
+  "project_id": "WDC-PMKSY-PRAKASAM",
+  "intervention_category": "Soil Conservation",
+  "intervention_type": "Contour Bunding",
+  "intervention_stage": "During Work",
+  "description": "MOCK DATA: Routine during work field verification for Contour Bunding.",
+  "photo_filename": "1d0bd0d2-4356-434e-9650-0b410b49708c.jpg",
+  "uploader": "Nodal_Officer_A",
+  "photo_url": "/api/drishti/photos/1d0bd0d2-4356-434e-9650-0b410b49708c.jpg"
+}

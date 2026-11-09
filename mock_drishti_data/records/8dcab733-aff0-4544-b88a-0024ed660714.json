@@ -1,0 +1,17 @@
+{
+  "id": "8dcab733-aff0-4544-b88a-0024ed660714",
+  "timestamp": "2026-08-31T04:55:02.810899+00:00",
+  "latitude": 15.35,
+  "longitude": 79.64,
+  "intervention_category": "Water Harvesting",
+  "intervention_type": "Check Dam",
+  "intervention_stage": "Completed",
+  "description": "Mock check dam field observation for testing satellite cross-check",
+  "gps_accuracy_m": null,
+  "is_mock": false,
+  "location_valid": true,
+  "uploader": "Web Upload",
+  "photo_url": "/api/drishti/photos/8dcab733-aff0-4544-b88a-0024ed660714.jpg",
+  "ai_confidence": "0.0",
+  "photo_filename": "8dcab733-aff0-4544-b88a-0024ed660714.jpg"
+}
